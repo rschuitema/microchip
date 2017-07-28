@@ -14,6 +14,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include <limits.h>
+#include "returncodes.h"
 #include "processor.h"
 
 
@@ -36,7 +37,7 @@
  * \return     ERR_OK when system is initialized properly.
  *             ERR_FAILED when system initialization failed.
  */
-int16_t SYSTEM_Initialize(void);
+int16_t SYSTEM_Init(void);
 
 #ifdef __cplusplus
     }
