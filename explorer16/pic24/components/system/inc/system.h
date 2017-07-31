@@ -16,6 +16,7 @@
 #include <limits.h>
 #include "returncodes.h"
 #include "processor.h"
+#include "oscillator.h"
 
 
 /*******************************************************************************
