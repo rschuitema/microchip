@@ -4,6 +4,9 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>../inc/gpio.h</itemPath>
+      <itemPath>../inc/pindefinitions.h</itemPath>
+      <itemPath>../inc/portdefinitions.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -12,7 +15,7 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>../src/main.c</itemPath>
+      <itemPath>../src/gpio.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -21,11 +24,12 @@
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
+    <Elem>../inc</Elem>
     <Elem>../src</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
-    <conf name="default" type="2">
+    <conf name="default" type="3">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <targetDevice>PIC24FJ128GA010</targetDevice>
@@ -39,57 +43,6 @@
       <compileType>
         <linkerTool>
           <linkerLibItems>
-            <linkerLibProjectItem>
-              <makeArtifact PL="../../../components/system/system.X"
-                            CT="3"
-                            CN="default"
-                            AC="true"
-                            BL="true"
-                            WD="../../../components/system/system.X"
-                            BC="${MAKE}  -f Makefile CONF=default"
-                            DBC="${MAKE}  -f Makefile CONF=default TYPE_IMAGE=DEBUG_RUN"
-                            CC="rm -rf &quot;build/default&quot; &quot;dist/default&quot;"
-                            OP="dist/default/production/system.X.a"
-                            DOP="dist/default/debug/system.X.a"
-                            FL="dist/default/production/system.X.a"
-                            PD="dist/default/production/system.X.a"
-                            DD="dist/default/debug/system.X.a">
-              </makeArtifact>
-            </linkerLibProjectItem>
-            <linkerLibProjectItem>
-              <makeArtifact PL="../../../components/delay/delay.X"
-                            CT="3"
-                            CN="default"
-                            AC="true"
-                            BL="true"
-                            WD="../../../components/delay/delay.X"
-                            BC="${MAKE}  -f Makefile CONF=default"
-                            DBC="${MAKE}  -f Makefile CONF=default TYPE_IMAGE=DEBUG_RUN"
-                            CC="rm -rf &quot;build/default&quot; &quot;dist/default&quot;"
-                            OP="dist/default/production/delay.X.a"
-                            DOP="dist/default/debug/delay.X.a"
-                            FL="dist/default/production/delay.X.a"
-                            PD="dist/default/production/delay.X.a"
-                            DD="dist/default/debug/delay.X.a">
-              </makeArtifact>
-            </linkerLibProjectItem>
-            <linkerLibProjectItem>
-              <makeArtifact PL="../../../components/gpio/gpio.X"
-                            CT="3"
-                            CN="default"
-                            AC="true"
-                            BL="true"
-                            WD="../../../components/gpio/gpio.X"
-                            BC="${MAKE}  -f Makefile CONF=default"
-                            DBC="${MAKE}  -f Makefile CONF=default TYPE_IMAGE=DEBUG_RUN"
-                            CC="rm -rf &quot;build/default&quot; &quot;dist/default&quot;"
-                            OP="dist/default/production/gpio.X.a"
-                            DOP="dist/default/debug/gpio.X.a"
-                            FL="dist/default/production/gpio.X.a"
-                            PD="dist/default/production/gpio.X.a"
-                            DD="dist/default/debug/gpio.X.a">
-              </makeArtifact>
-            </linkerLibProjectItem>
           </linkerLibItems>
         </linkerTool>
         <archiverTool>
@@ -126,8 +79,7 @@
         <property key="enable-short-double" value="false"/>
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
-        <property key="extra-include-directories"
-                  value="..\..\..\components\system\inc;..\..\..\components\delay\inc;..\..\..\components\types\inc;..\..\..\components\gpio\inc"/>
+        <property key="extra-include-directories" value="..\inc;..\..\system\inc"/>
         <property key="isolate-each-function" value="false"/>
         <property key="keep-inline" value="false"/>
         <property key="oXC16gcc-align-arr" value="false"/>

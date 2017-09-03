@@ -3,19 +3,15 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>demo</name>
-            <creation-uuid>f6a234fb-9c41-4869-9323-a66c8d3fbafe</creation-uuid>
+            <name>gpio</name>
+            <creation-uuid>f170935b-31d1-4083-90ff-3d64e2f70d44</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>
             <cpp-extensions/>
-            <header-extensions/>
+            <header-extensions>h</header-extensions>
             <asminc-extensions/>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
-            <make-dep-projects>
-                <make-dep-project>../../../components/system/system.X</make-dep-project>
-                <make-dep-project>../../../components/delay/delay.X</make-dep-project>
-                <make-dep-project>../../../components/gpio/gpio.X</make-dep-project>
-            </make-dep-projects>
+            <make-dep-projects/>
         </data>
     </configuration>
 </project>
